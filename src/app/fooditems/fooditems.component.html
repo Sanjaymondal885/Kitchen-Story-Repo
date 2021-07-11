@@ -1,0 +1,76 @@
+<app-headerhome></app-headerhome>
+
+
+
+<!-- <div >
+      
+     <div  (click)="selectedFooditemMethod(items.id)" id="content" *ngFor="let items of fooditems" 
+     style="float: left; height: auto;width: auto;border: solid; 
+     margin: 10px; border-color: seagreen; ">
+         <img src="{{items.itemimg}}"  ><br>
+         {{items.id}} . {{items.itemname}} {{items.itemprice}}
+     </div>
+   </div> -->
+
+   <div style="padding-top: 100px;" >
+
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col" >
+         <div class="container"   id="content" *ngFor="let items of fooditems" >
+            <div class="row">
+              <div class="col-sm" >
+                <img src="{{items.itemimg}}"  >
+              </div>
+              <div class="col-sm">
+               Id : {{items.id}} <br> 
+                <h2>  {{items.itemname}} </h2> <br>
+                Price : <h1>₹ {{items.itemprice}}</h1>
+              </div>
+              <div class="col-sm">
+                <p>Quantity : <input type="number" min="1" max="5"    name="qty"  [(ngModel)]="qty" ></p>
+                <button  (click)="AddtoCart(items.id)" class="btn btn-secondary" >Add</button>
+               
+              </div>
+            </div>
+          </div>
+         </div>
+ 
+
+
+        <div id="cartdiv" class="col col-lg-3" style="position: relative;" *ngIf="isShowCart">
+          <table>
+         <thead><tr><td>Item </td> <td>Qty </td> <td>Price </td> </tr></thead>
+         <hr>
+          
+            
+          <tbody >
+            <tr id="divshow"
+            *ngFor="let orderss of ordersModel"><td>{{orderss.itemname}}   </td> <td>{{orderss.qty}}  </td> <td>Rs {{orderss.itemprice}}  </td> </tr></tbody>
+             <br><br>
+            <hr>
+            Total :Rs {{totalPrice}}
+<br>
+            <button  class="btn btn-outline-success" (click)=placeOrderClick()>Place Order</button>
+          </table>
+            
+            </div>
+            
+           
+        </div>
+
+
+      </div>
+
+
+  
+</div>
+  
+  <br>
+  <!-- <div id="cartdiv" *ngIf="isShown" class="row container-fluid"  >
+    Div Content
+    <button class="btn btn-secondary"  >Add</button>
+    </div> -->
+   <app-footerhome></app-footerhome>

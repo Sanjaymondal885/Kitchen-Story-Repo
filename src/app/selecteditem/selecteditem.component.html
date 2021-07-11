@@ -1,0 +1,28 @@
+<app-headerhome></app-headerhome>
+
+
+<!-- <img src="{{selectedfooditem.itemimg}}">
+
+<p>Id :  {{selectedfooditem.id}}</p>
+<p>Item Name :  {{selectedfooditem.itemname}}</p>
+<p>Item Catid :  {{selectedfooditem.cat_id}}</p>
+<p>Item Price :  {{selectedfooditem.itemprice}}</p> -->
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm" id="imgcolumn">
+        <img src="{{selectedfooditem.itemimg}}">
+      </div>
+      <div class="col-sm" id="itemInfocolumn">
+        <p>Id :  {{selectedfooditem.id}}</p>
+        <p>Item Name :  {{selectedfooditem.itemname}}</p>
+        <p>Item Catid :  {{selectedfooditem.cat_id}}</p>
+        <p>Item Price :  {{selectedfooditem.itemprice}}</p>
+<p>Quantity :<input type="number" min="1" max="5"></p>
+        <button class="btn btn-secondary">Add to Cart</button>
+      </div>
+       
+    </div>
+  </div>
+
+<app-footerhome></app-footerhome>

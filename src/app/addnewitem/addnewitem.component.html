@@ -1,0 +1,33 @@
+<app-admin-nav-bar></app-admin-nav-bar> 
+<div class="col-md-5 offset-md-3" id="formsDivStyle"> 
+     <h2>Add NewItem</h2>
+    
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+        <label>Categeory</label>
+        <input type="text" class="form-control" id="categeory"
+        [(ngModel)]="fooditem.cat_id" name="categeory">
+         </div>
+         <div class="form-group">
+            <label>Item Name</label>
+            <input type="text" class="form-control" id="itemname"
+            [(ngModel)]="fooditem.itemname" name="itemname">
+             </div>
+    
+             <div class="form-group">
+                <label>Price</label>
+                <input type="text" class="form-control" id="price"
+                [(ngModel)]="fooditem.itemprice" name="price">
+                 </div>
+
+                 <div class="form-group">
+                    <label>Imgage Link</label>
+                    <input type="text" class="form-control" id="imglink"
+                    [(ngModel)]="fooditem.itemimg" name="imglink">
+                     </div>
+                 <br>
+             <button class="btn btn-success" type="submit"  >Add Item</button>
+        </form>
+        
+    </div>
+    <app-footerhome></app-footerhome>

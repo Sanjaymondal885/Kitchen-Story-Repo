@@ -1,0 +1,43 @@
+  <app-admin-nav-bar></app-admin-nav-bar> 
+      
+<div>
+      <!--
+    <div    id="content" *ngFor="let items of fooditems" 
+    style="float: left; height: auto;width: auto;border: solid; 
+    margin: 10px; border-color: seagreen; ">
+        <img src="{{items.itemimg}}"  ><br>
+        {{items.id}} . {{items.itemname}} {{items.itemprice}}
+    </div>
+-->
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Categeory</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">ImgLink</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let items of fooditems">
+          <th scope="row">{{items.id}}</th>
+          <td>{{items.cat_id}}</td>
+          <td>{{items.itemname}}</td>
+          <td>{{items.itemprice}}</td>
+          <td>{{items.itemimg}}</td>
+          <td><button class="btn btn-primary" (click)=updateFoodItem(items.id)>Update</button></td>
+          <td><button  class="btn btn-danger"  (click)=deleteFoodItem(items.id)>Delete</button></td>
+        </tr>
+        
+         
+      </tbody>
+    </table>
+  </div>
+
+    <!--<div id="divCategeory" style="visibility: hidden;"> <app-home></app-home> </div>-->
+  
+    <app-footerhome></app-footerhome>
+  

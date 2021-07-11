@@ -1,0 +1,19 @@
+ 
+   <app-headerhome></app-headerhome>
+
+   
+  <div  style="padding-top: 100px;" >
+     
+    <section   (click)="itemMethod(cat.id)"  id="content" *ngFor="let cat of categeories">
+      <div >
+        <img src="{{cat.imglink}}"  >
+      </div><br>
+       <p >   {{cat.categeoryname}} </p>
+       
+    </section>
+  </div>
+
+   
+  <app-footerhome></app-footerhome>
+ 
+ 
